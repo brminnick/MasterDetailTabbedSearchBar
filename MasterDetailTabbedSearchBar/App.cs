@@ -14,6 +14,7 @@ namespace MasterDetailTabbedSearchBar
             var navigationPage = new Xamarin.Forms.NavigationPage(new MySearchPage())
             {
                 Title = "Tab 1",
+                BarBackgroundColor = Color.SteelBlue,
                 BarTextColor = Color.Orange
             };
             navigationPage.On<iOS>().SetPrefersLargeTitles(true);
@@ -23,8 +24,8 @@ namespace MasterDetailTabbedSearchBar
                 Children =
                 {
                     navigationPage,
-                    new ContentPage{ Title = "Tab 2" },
-                    new ContentPage{ Title = "Tab 3" }
+                    new DarkGrayContentPage{ Title = "Tab 2" },
+                    new DarkGrayContentPage{ Title = "Tab 3" }
                 }
             };
             tabbedPage.On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
@@ -41,10 +42,7 @@ namespace MasterDetailTabbedSearchBar
         }
     }
 
-    //how about adding a searchbar on a masterdetail page, with a tabbed page inside and showing
-    //the search bar only on 1 of the pages inside the tabbedpage? got this working on Android, but no luk yet with iOS
-
-    public class MySearchPage : ContentPage, ISearchPage
+    public class MySearchPage : DarkGrayContentPage, ISearchPage
     {
         public MySearchPage()
         {
@@ -66,6 +64,11 @@ namespace MasterDetailTabbedSearchBar
     {
         void OnSearchBarTextChanged(string text);
         event EventHandler<string> SearchBarTextChanged;
+    }
+
+    public class DarkGrayContentPage : ContentPage
+    {
+        public DarkGrayContentPage() => BackgroundColor = Color.DarkGray;
     }
 }
 

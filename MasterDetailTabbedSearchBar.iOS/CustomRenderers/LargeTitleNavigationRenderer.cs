@@ -1,10 +1,10 @@
-﻿using GitTrends.iOS.CustomRenderers;
+﻿using MasterDetailTabbedSearchBar.iOS;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-//[assembly: ExportRenderer(typeof(NavigationPage), typeof(LargeTitleNavigationRenderer))]
-namespace GitTrends.iOS.CustomRenderers
+[assembly: ExportRenderer(typeof(NavigationPage), typeof(LargeTitleNavigationRenderer))]
+namespace MasterDetailTabbedSearchBar.iOS
 {
     public class LargeTitleNavigationRenderer : NavigationRenderer
     {
