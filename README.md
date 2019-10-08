@@ -1,5 +1,7 @@
 # MasterDetailTabbedSearchBar
-Sample app demonstrating how to add a SearchBar to a NavigationPage inside of a TabbedPage inside of a MasterDetailPage
+This is a sample app demonstrating how to add a SearchBar to a NavigationPage inside of a TabbedPage inside of a MasterDetailPage.
+
+For more information, refrerence this blog post, "Adding a Search Bar to Xamarin.Forms.NavigationPage": https://codetraveler.io/2019/10/05/adding-a-search-bar-to-xamarin-forms-navigationpage/
 
 iOS | Android
 ----|-------
